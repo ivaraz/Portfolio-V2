@@ -8,7 +8,14 @@ import Nav from "../components/Nav";
 import Contact from "../Layout/Contact";
 import "../index.css";
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function App() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <>
       <Nav />
@@ -18,7 +25,7 @@ export default function App() {
       <div id="about">
         <About />
       </div>
-      <div id="skills">
+      <div id="skills" className="pb-20">
         <Skills />
       </div>
       <div id="project">

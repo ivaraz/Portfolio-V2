@@ -9,10 +9,14 @@ export default function Home() {
         className="lg:flex flex-col lg:flex-row-reverse flex lg:justify-around justify-center gap-11 items-center max-h-screen-sm h-screen bg-white"
       >
         <div
+          data-aos="fade-right"
           className="lg:w-4/12 w-[20rem] h-[15rem] bg-red-500 bg-bottom rounded-sm bg-cover"
           style={{ backgroundImage: `url(${Rifa})` }}
         ></div>
-        <div className="flex flex-col mr-10  lg:gap-5 gap-3">
+        <div
+          data-aos="fade-left"
+          className="flex flex-col mr-10  lg:gap-5 gap-3"
+        >
           <h1 className="lg:text-5xl text-3xl font-semibold flex flex-col">
             <span>Muhammad Rifa</span>
             <span>Maulana Aziz</span>

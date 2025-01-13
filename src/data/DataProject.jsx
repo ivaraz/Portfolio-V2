@@ -5,6 +5,7 @@ const dataProject = [
     description: "kenangan smk",
     tech: ["TailwindCSS", "JavaScript", "AlpineJS"],
     link: "https://ivaraz.github.io/XIITKJ3/",
+    animate: "fade-right",
   },
   {
     photo: "../assets/photos/cp2.png",
@@ -12,6 +13,7 @@ const dataProject = [
     description: "custom project",
     tech: ["Bootstrap", "JavaScript"],
     link: "https://ivaraz.github.io/undangan/",
+    animate: "fade-left",
   },
   {
     photo: "../assets/photos/cp3.png",
@@ -19,6 +21,7 @@ const dataProject = [
     description: "made this for custom page",
     tech: ["HTML", "CSS"],
     link: "https://ivaraz.github.io/login-page/",
+    animate: "fade-right",
   },
   {
     photo: "../assets/photos/cp4.png",
@@ -26,6 +29,7 @@ const dataProject = [
     description: "first project",
     tech: ["TailwindCSS", "JavaScript", "AlpineJS"],
     link: "https://ivaraz.github.io/",
+    animate: "fade-left",
   },
 ];
 

@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 export default function ProjectCard(props) {
-  const { photo, title, description, tech, link } = props;
+  const { photo, title, description, tech, link, animate } = props;
   return (
-    <div className="w-full h-auto rounded-md pb-3 bg-white border-2 border-black shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-gray-400">
+    <div
+      data-aos={animate}
+      className="w-full h-auto rounded-md pb-3 bg-white border-2 border-black shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-gray-400"
+    >
       <Link to={link} target="_blank">
         <div
           className={`w-[20rem] h-[10rem] bg-cover bg-[center_top_-5rem] rounded-sm bg-red-700 `}

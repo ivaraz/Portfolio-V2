@@ -1,5 +1,6 @@
 import Rifa from "/assets/photos/Rifa.jpg";
 import Education from "../components/Education";
+
 export default function About() {
   return (
     <div
@@ -8,10 +9,11 @@ export default function About() {
     >
       <div className="lg:flex lg:flex-row flex flex-col items-center gap-12 lg:gap-24">
         <div
+          data-aos="fade-right"
           className="lg:w-[20rem] hidden lg:flex lg:h-[20rem] w-[17rem] h-[17rem] rounded-sm bg-cover bg-top bg-no-repeat"
           style={{ backgroundImage: `url(${Rifa})` }}
         ></div>
-        <div className="lg:w-[50rem] w-[25rem]">
+        <div data-aos="fade-left" className="lg:w-[50rem] w-[25rem]">
           <div className="flex">
             <h1 className="text-4xl font-bai font-semibold mb-3">About Me</h1>
             <span className="w-[15%] self-center ml-3 h-0.5 bg-black"></span>
