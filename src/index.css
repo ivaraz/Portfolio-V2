@@ -25,4 +25,10 @@
     font-size: 0.75em;
     /* margin: 1.67em 0; */
   }
+  p {
+    font-size: 1em;
+  }
+  i {
+    font-size: 0.8em;
+  }
 }

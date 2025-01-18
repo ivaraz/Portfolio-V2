@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <div
         id="home"
-        className="lg:flex flex-col lg:flex-row-reverse flex lg:justify-around justify-center gap-11 items-center max-h-screen-sm h-screen bg-white"
+        className="lg:flex lg:flex-row-reverse lg:justify-around flex flex-col justify-center items-center gap-11 w-full min-h-screen-sm h-screen bg-white"
       >
         <div
           data-aos="fade-right"

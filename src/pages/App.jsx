@@ -19,7 +19,7 @@ export default function App() {
   return (
     <>
       <Nav />
-      <div id="home" className="pb-20">
+      <div id="home" className=" pb-20">
         <Home />
       </div>
       <div id="about">
