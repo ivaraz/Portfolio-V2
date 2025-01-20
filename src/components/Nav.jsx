@@ -38,11 +38,11 @@ export default function Nav() {
 
   return (
     <nav
-      className={`w-full bg-white fixed top-0 z-50 transition-shadow duration-300 ${
+      className={`max-w-full bg-white fixed top-0 z-50 transition-shadow duration-300 ${
         hasShadow ? "shadow-md" : ""
       }`}
     >
-      <div className="mx-auto px-4 flex justify-between items-center py-4">
+      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
         {/* Logo */}
         <span className="font-semibold text-lg lg:text-xl">M.R.M.A</span>
 
