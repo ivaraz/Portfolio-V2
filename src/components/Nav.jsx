@@ -38,7 +38,7 @@ export default function Nav() {
 
   return (
     <nav
-      className={`max-w-full bg-white fixed top-0 z-50 transition-shadow duration-300 ${
+      className={`min-w-full bg-white fixed top-0 z-50 transition-shadow duration-300 ${
         hasShadow ? "shadow-md" : ""
       }`}
     >

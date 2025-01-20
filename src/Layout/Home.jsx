@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="lg:flex lg:flex-row-reverse lg:justify-around flex flex-col justify-center items-center gap-11 w-full  h-screen bg-white"
+      className="lg:flex lg:flex-row-reverse lg:justify-around flex flex-col justify-center items-center gap-11 max-w-full h-screen bg-white"
     >
       <div
         data-aos="fade-right"
