@@ -42,7 +42,7 @@ export default function Nav() {
         hasShadow ? "shadow-md" : ""
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
+      <div className="mx-auto px-4 flex justify-between items-center py-4">
         {/* Logo */}
         <span className="font-semibold text-lg lg:text-xl">M.R.M.A</span>
 
