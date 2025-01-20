@@ -17,7 +17,7 @@ export default function App() {
     AOS.init();
   });
   return (
-    <>
+    <div className="*:outline-2 *:outline-red-500 justify-center items-center flex flex-col">
       <Nav />
       <div id="home" className=" pb-20">
         <Home />
@@ -38,6 +38,6 @@ export default function App() {
         <Contact />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
