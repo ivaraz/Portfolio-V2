@@ -1,7 +1,7 @@
 import edu from "../data/DataEdu";
 export default function Education() {
   return (
-    <div className="grid gap-5 lg:flex-row lg:flex max-w-fit">
+    <div className="grid gap-5 lg:flex-row lg:flex max-w-fit mx-auto lg:mx-0">
       {edu.map((data, index) => (
         <div
           key={index}
