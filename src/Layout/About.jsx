@@ -1,7 +1,22 @@
 import Rifa from "/assets/photos/Rifa.jpg";
-import Education from "../components/Education";
+import { useState, useEffect } from "react";
 
 export default function About() {
+  const [age, setAge] = useState(19);
+
+  useEffect(() => {
+    const today = new Date();
+    const birthMonth = 3;
+    const birthDay = 23;
+    const birthYear =
+      today.getFullYear() -
+      (today.getMonth() > birthMonth ||
+      (today.getMonth() === birthMonth && today.getDate() >= birthDay)
+        ? 0
+        : 1);
+
+    setAge(19 + (birthYear - 2024));
+  }, []);
   return (
     <div
       id="about"
@@ -14,22 +29,27 @@ export default function About() {
           style={{ backgroundImage: `url(${Rifa})` }}
         ></div>
         <div data-aos="fade-left" className="lg:w-[50rem] w-[25rem]">
-          <div className="flex justify-center lg:justify-start">
-            <h1 className="text-4xl font-bai font-semibold mb-3 text-center lg:text-start">
+          <div className="flex lg:justify-start">
+            <h1 className="text-4xl font-bai font-semibold mb-3 text-start">
               About Me
             </h1>
             <span className="w-[15%] self-center ml-3 rounded-lg h-[0.2rem] bg-black"></span>
           </div>
-          <p className="lg:text-xl text-md mx-auto lg:mx-0 w-[20rem] lg:w-[40rem]">
-            Saya adalah seorang Frontend Developer yang memiliki pengetahuan
-            tentang HTML, CSS, dan JavaScript. Saya memiliki kemampuan untuk
-            membuat tampilan website yang menarik dan responsif. Saya juga
-            memiliki kemampuan untuk menggunakan framework seperti React
-          </p>
-          <h2 className="font-semibold my-3 text-center lg:text-start">
-            Education
-          </h2>
-          <Education />
+          <div className="lg:text-xl gap-5 grid text-md lg:mx-0 w-[25rem] lg:w-[45rem]">
+            <p>
+              Hello peoples!! My fullname is Muhammad Rifa Maulana Aziz, and I
+              was born on 23 April 2005 ({age} years old). I'm an Informatics
+              Student at Suryakancana University and have expertise in Front End
+              development and computer networking.
+            </p>
+            <p>
+              I have experience in building responsive and dynamic user
+              interfaces, as well as a strong understanding of networking
+              concepts to ensure optimal connectivity in systems. I am always
+              eager to learn new things and enhance my skills in the world of
+              technology.
+            </p>
+          </div>
         </div>
       </div>
     </div>

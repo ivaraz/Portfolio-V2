@@ -17,10 +17,10 @@ export default function Home() {
           <span>Muhammad Rifa</span>
           <span>Maulana Aziz</span>
         </h1>
-        <p className="text-xl">IT Enthusiast</p>
+        <p className="text-xl">IT Enthusiast | Informatics Student</p>
         <div className="flex gap-5">
           <Button
-            name="Download CV"
+            name="Resume"
             text="white"
             bg="black"
             bgHover="white"
