@@ -10,7 +10,7 @@ export default function Skills() {
       <h1
         data-aos="fade-down"
         data-aos-duration="2000"
-        className="font-semibold"
+        className="font-semibold text-2xl lg:text-4xl"
       >
         Technical Skill
       </h1>

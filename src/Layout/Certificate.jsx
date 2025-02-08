@@ -4,7 +4,7 @@ export default function Certificate() {
       id="certificate"
       className="flex flex-col gap-10 justify-center items-center w-screen h-screen bg-white"
     >
-      <h1 data-aos="fade-down" className="font-semibold">
+      <h1 data-aos="fade-down" className="text-3xl lg:text-4xl font-semibold">
         Certificate
       </h1>
       <div

@@ -10,7 +10,7 @@ export default function Project() {
       <h1
         data-aos="fade-down"
         data-aos-duration="1000"
-        className="text-4xl font-semibold"
+        className="text-3xl lg:text-4xl font-semibold"
       >
         Project
       </h1>
