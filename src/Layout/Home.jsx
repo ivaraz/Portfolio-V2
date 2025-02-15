@@ -14,8 +14,12 @@ export default function Home() {
       ></div>
       <div data-aos="fade-left" className="flex flex-col lg:gap-5 gap-3">
         <h1 className="lg:text-5xl text-3xl font-semibold flex flex-col">
-          <span>Muhammad Rifa</span>
-          <span>Maulana Aziz</span>
+          <span>
+            Muhammad <span className="text-red-600">Rifa</span>
+          </span>
+          <span>
+            Maulana <span className="text-red-600">Aziz</span>
+          </span>
         </h1>
         <p className="lg:text-xl">IT Enthusiast | Informatics Student</p>
         <div className="flex gap-5">
@@ -26,7 +30,7 @@ export default function Home() {
             bgHover="white"
             textHover="black"
             download="cv"
-            link="/assets/cv/cv.mrifa.pdf"
+            link="/assets/cv/latest-cv.pdf"
           />
           <Button name="Contact Me" />
         </div>

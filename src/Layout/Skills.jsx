@@ -12,9 +12,9 @@ export default function Skills() {
         data-aos-duration="2000"
         className="font-semibold text-2xl lg:text-4xl"
       >
-        Technical Skill
+        Stack
       </h1>
-      <div className="flex flex-col gap-5 lg:flex-row lg:gap-12">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
         {dataSkills.map((data, index) => (
           <CardSkills key={index} {...data} />
         ))}

@@ -44,7 +44,7 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
         {/* Logo */}
-        <span className="font-semibold text-lg lg:text-xl">M.R.M.A</span>
+        <span className="font-semibold text-lg lg:text-xl">RIFA AZIZ</span>
 
         {/* Hamburger Button */}
         <button
