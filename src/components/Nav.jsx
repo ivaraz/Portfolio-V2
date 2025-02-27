@@ -33,7 +33,6 @@ export default function Nav() {
     { id: "skills", label: "Skills" },
     { id: "project", label: "Project" },
     { id: "certificate", label: "Certificate" },
-    { id: "suggestion", label: "Suggestion" },
   ];
 
   return (

@@ -1,15 +1,49 @@
+import { useState } from "react";
+
 import Button from "./Button";
 
 const ContactForm = () => {
-  const msgBtn = () => {
-    alert("Thanks for suggest, i'll fix it soon");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbyBxlPje4c3ZQa66DHE9FHYjU-yqm_S86hNwRvIMxjfHyXORXl1F5DF5V3T1AtpJ0guNg/exec";
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      setStatus("Sukses! Data berhasil dikirim.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      setStatus("Data gagal dikirim.");
+      console.error("Error:", error);
+    }
   };
   return (
     <form
-      id="contact-form"
-      name="contact-form"
+      id="form-saran"
+      name="form-saran"
       className="space-y-6"
       data-aos="fade-left"
+      onSubmit={handleSubmit}
     >
       <div className="relative">
         <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none text-gray-400">
@@ -32,7 +66,9 @@ const ContactForm = () => {
           placeholder="Your Name"
           required
           className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-300 hover:border-blue-400 dark:hover:border-blue-500"
-          name="nama"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
         />
       </div>
       <div className="relative">
@@ -57,6 +93,8 @@ const ContactForm = () => {
           required
           className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-300 hover:border-blue-400 dark:hover:border-blue-500"
           name="email"
+          value={formData.email}
+          onChange={handleChange}
         />
       </div>
       <div className="relative">
@@ -80,12 +118,13 @@ const ContactForm = () => {
           rows="4"
           required
           className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-300 hover:border-blue-400 dark:hover:border-blue-500 resize-none"
-          name="pesan"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
         />
       </div>
       <Button
-        onClick={msgBtn}
-        type="submit"
+        type={"submit"}
         className="group w-full md:w-auto px-6 py-3 bg-black hover:text-black text-white rounded-lg hover:bg-white transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg flex items-center justify-center space-x-2"
       >
         <span>Send Message</span>
@@ -103,6 +142,23 @@ const ContactForm = () => {
           />
         </svg>
       </Button>
+      {status && (
+        <div
+          className={`mt-4 p-3 rounded-lg flex items-center justify-between ${
+            status.includes("Sukses")
+              ? "bg-green-100 text-green-800 border border-green-400"
+              : "bg-red-100 text-red-800 border border-red-400"
+          }`}
+        >
+          <span>{status}</span>
+          <button
+            onClick={() => setStatus("")}
+            className="ml-3 text-lg font-bold"
+          >
+            ✖
+          </button>
+        </div>
+      )}
     </form>
   );
 };

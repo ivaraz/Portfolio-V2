@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import Rifa from "/assets/photos/hero.jpeg";
+import Rifa from "/assets/photos/ivar.jpeg";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
     >
       <div
         data-aos="fade-right"
-        className="lg:w-4/12 w-[15rem] h-[15rem] bg-red-500 max-w-screen-sm bg-bottom rounded-sm bg-cover"
+        className="lg:w-4/12 w-[15rem] h-[15rem] max-w-screen-sm bg-[50%_30%] rounded-sm bg-cover"
         style={{ backgroundImage: `url(${Rifa})` }}
       ></div>
       <div data-aos="fade-left" className="flex flex-col lg:gap-5 gap-3">
@@ -32,7 +32,7 @@ export default function Home() {
             download="cv"
             link="/assets/cv/latest-cv.pdf"
           />
-          <Button name="Contact Me" />
+          <Button name="Contact Me" link="#contact" />
         </div>
       </div>
     </div>
