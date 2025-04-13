@@ -8,17 +8,22 @@ export default function About() {
 
   useEffect(() => {
     const today = new Date();
-    const birthMonth = 3;
-    const birthDay = 23;
-    const birthYear =
-      today.getFullYear() -
-      (today.getMonth() > birthMonth ||
-      (today.getMonth() === birthMonth && today.getDate() >= birthDay)
-        ? 0
-        : 1);
-
-    setAge(19 + (birthYear - 2024));
+    const birthDate = new Date("2005-04-23");
+  
+    let age = today.getFullYear() - birthDate.getFullYear();
+  
+    const isBeforeBirthday =
+      today.getMonth() < birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() &&
+        today.getDate() < birthDate.getDate());
+  
+    if (isBeforeBirthday) {
+      age -= 1;
+    }
+  
+    setAge(age);
   }, []);
+  
   return (
     <div
       id="about"

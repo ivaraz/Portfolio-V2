@@ -1,6 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import routes, { AppRoute } from "../router/routes";
+import { NavLink } from 'react-router-dom'
 
-export default function Nav() {
+
+
+const Nav: React.FC = () => {
+  const navLinks = (routes[0]?.children ?? []) as AppRoute[];
   const [hasShadow, setHasShadow] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -19,21 +24,6 @@ export default function Nav() {
     };
   }, []);
 
-  const handleScrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
-  };
-
-  const navItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "project", label: "Project" },
-    { id: "certificate", label: "Certificate" },
-  ];
 
   return (
     <nav
@@ -77,37 +67,42 @@ export default function Nav() {
 
         {/* PC Navbar */}
         <div
-          className={`lg:flex hidden items-center gap-8 font-semibold text-gray-700 ${
+          className={`lg:flex hidden md:hidden items-center gap-8 font-semibold text-gray-700 ${
             isMenuOpen ? "block" : "hidden"
           }`}
         >
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleScrollToSection(item.id)}
-              className="block lg:inline-block text-left text-black text-md py-2 lg:py-0 hover:text-black focus:outline-none relative group"
+          {navLinks.map((route, item) => (
+            <li key={item} className="list-none">
+            <NavLink
+              to={route.path ?? "/"}
+              style={({ isActive }) => ({
+                color: isActive ? "black" : "gray",
+                fontWeight: isActive ? "bold" : "semibold",
+              })}
             >
-              {item.label}
-              <span className="absolute bottom-[-2px] left-0 w-0 h-[2.5px] bg-black transition-all duration-300 group-hover:w-full rounded-md"></span>
-            </button>
+              {route.name}
+            </NavLink>
+          </li>
           ))}
         </div>
       </div>
 
       {/* Mobile Navbar */}
       {isMenuOpen && (
-        <div className="lg:hidden md:hidden bg-white shadow-md">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleScrollToSection(item.id)}
+        <div className="lg:hidden md:hidden bg-white shadow-md px-4 pb-4">
+          {navLinks.map((route,item) => (
+            <NavLink to={route.path}
+              key={item}
+              onClick={() => setIsMenuOpen(false)}
               className="block w-full text-center font-semibold px-4 py-2 text-black hover:bg-gray-100 hover:font-bold"
             >
-              {item.label}
-            </button>
+              {route.name}
+            </NavLink>
           ))}
         </div>
       )}
     </nav>
   );
 }
+
+export default Nav;
