@@ -73,7 +73,7 @@ const Nav: React.FC = () => {
         >
           {navLinks.map((route, item) => (
             <li key={item} className="list-none">
-            <NavLink
+            <NavLink className={"relative group"}
               to={route.path ?? "/"}
               style={({ isActive }) => ({
                 color: isActive ? "black" : "gray",
@@ -81,6 +81,7 @@ const Nav: React.FC = () => {
               })}
             >
               {route.name}
+            <span className="absolute bottom-[-5px] left-0 w-0 h-[2.5px] bg-black transition-all duration-300 group-hover:w-full rounded-md"></span>
             </NavLink>
           </li>
           ))}
