@@ -4,7 +4,7 @@ import AboutPage from "../pages/AboutPage";
 import CertificatePage from "../pages/CertificatePage";
 import ContactPage from "../pages/ContactPage";
 import SkillsPage from "../pages/SkillsPage";
-import MainLayout from "../layout/MainLayout";
+import MainLayout from "../Layout/MainLayout";
 
 export interface AppRoute extends RouteObject {
   name?: string;
