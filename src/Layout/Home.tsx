@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import Rifa from "/assets/photos/ivar.jpeg";
+import Rifa from "/assets/photos/rifaunsur.jpeg";
 import Lanyard from "../components/Lanyard/Lanyard";
 import TitledCard from "../components/TitledCard";
 import AOS from "aos";
@@ -57,7 +57,7 @@ export default function Home() {
             download="cv"
             link="/assets/cv/latest-cv.pdf"
           />
-          <Button name="Contact Me" link="#contact" />
+          <Button name="Contact Me" link="/contact" />
         </div>
       </div>
     </div>
