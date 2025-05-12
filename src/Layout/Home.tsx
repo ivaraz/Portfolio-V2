@@ -4,6 +4,7 @@ import Lanyard from "../components/Lanyard/Lanyard";
 import TitledCard from "../components/TitledCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from 'react-router-dom'
 import { useEffect } from "react";
 
 export default function Home() {
@@ -57,7 +58,10 @@ export default function Home() {
             download="cv"
             link="/assets/cv/latest-cv.pdf"
           />
-          <Button name="Contact Me" link="/contact" />
+          
+          <Link to="/contact">
+            <Button name="Contact Me" />
+          </Link>
         </div>
       </div>
     </div>
