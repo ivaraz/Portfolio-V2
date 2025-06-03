@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import routes, { AppRoute } from "../router/routes";
 import { NavLink } from 'react-router-dom'
 
-
-
 const Nav: React.FC = () => {
   const navLinks = (routes[0]?.children ?? []) as AppRoute[];
   const [hasShadow, setHasShadow] = useState(false);

@@ -48,9 +48,9 @@ export default function About() {
           <div className="gap-5 grid lg:text-lg lg:mx-0 w-full text-sm lg:w-[45rem]">
             <p className="text-justify mx-5 lg:mx-0">
               Hello everyone!! My fullname is Muhammad Rifa Maulana Aziz, and I
-              was born on 23 April 2005 ({age} years old). I'm an Informatics
+              was born on 23 April 2005 ({age} years old). I'm a Lazy Programmer also Informatics
               Student at Suryakancana University and have interesting on Front End
-              development and computer networking.
+              Development and Computer Networking.
             </p>
             <div className="flex lg:gap-5 gap-3 justify-center items-center">
             {DataSos.map((item, index) => (
