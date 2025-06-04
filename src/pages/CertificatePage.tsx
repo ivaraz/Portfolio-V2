@@ -5,7 +5,6 @@ import Footer from '../components/Footer'
 export default function CertificatePage() {
   return (
     <>
-        {/* <Nav/> */}
         <Certificate/>
         <Footer/>
     </>
