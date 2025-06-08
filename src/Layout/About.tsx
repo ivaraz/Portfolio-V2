@@ -52,9 +52,9 @@ export default function About() {
               Student at Suryakancana University and have interesting on Front End
               Development and Computer Networking.
             </p>
-            <div className="flex lg:gap-5 gap-3 justify-center items-center">
+            <div className="grid grid-cols-2 lg:grid-cols-4 mx-10 lg:gap-5 gap-3 justify-center items-center">
             {DataSos.map((item, index) => (
-               <Details key={index} logo={item.logo} sosmed={item.sosmed} link={item.link} />
+               <Details key={index} {...item} />
             ))}
             </div>
           </div>

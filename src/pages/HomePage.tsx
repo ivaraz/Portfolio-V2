@@ -1,14 +1,16 @@
 import Home from "../Layout/Home";
+import HomeLayout from "../Layout/HomeLayout";
 import Footer from "../components/Footer";
-import Nav from "../components/Nav";
 
 
 export default function HomePage() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-white">
       {/* <Nav /> */}
-      <Home />
+      <main className="flex-grow">
+        <HomeLayout />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }

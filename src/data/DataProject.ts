@@ -31,6 +31,22 @@ const dataProject = [
     link: "https://ivaraz.github.io/",
     animate: "fade-left",
   },
+  {
+    photo: "../assets/photos/cp5.png",
+    title: "Guess The Number?",
+    description: "Tugas Besar Matematika Diskrit",
+    tech: ["HTML","CSS", "JavaScript"],
+    link: "https://ivaraz.github.io/guess-the-number",
+    animate: "fade-right",
+  },
+  {
+    photo: "../assets/photos/cp6.png",
+    title: "Guess The Number 2",
+    description: "(+) Hints & Rumus",
+    tech: ["HTML","CSS", "JavaScript"],
+    link: "https://ivaraz.github.io/guess-the-number-2",
+    animate: "fade-left",
+  },
 ];
 
 export default dataProject;

@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="flex flex-col gap-10 justify-center items-center min-h-screen"
+      className="flex flex-col gap-10 justify-center items-center min-h-screen bg-white"
     >
       <h1
         data-aos="fade-down"
@@ -14,7 +14,7 @@ export default function Skills() {
       >
         Technical Stack
       </h1>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mx-auto">
         {dataSkills.map((data, index) => (
           <CardSkills key={index} {...data} />
         ))}

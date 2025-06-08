@@ -1,6 +1,12 @@
-import { FaLinkedin, FaInstagram, FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaGithubSquare, FaDownload } from "react-icons/fa";
 
 const DataSos = [
+    {
+        logo: <FaDownload />,
+        sosmed: "Resume",
+        link: "/assets/cv/latest-cv.pdf",
+        isDownload: true
+    },
     {
         logo: <FaLinkedin />,
         sosmed: "LinkedIn",
@@ -16,6 +22,7 @@ const DataSos = [
         sosmed: "Instagram",
         link: "http://instagram.com/ivaraz_"
     }
+    
 ];
 
 export default DataSos;
