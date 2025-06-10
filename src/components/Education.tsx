@@ -1,14 +1,18 @@
 import edu from "../data/DataEdu";
 export default function Education() {
   return (
-    <div className="grid gap-5 lg:flex-row lg:flex max-w-fit mx-auto lg:mx-0">
+    <div className="grid gap-5 min-w-full">
       {edu.map((data, index) => (
         <div
           key={index}
-          className="flex flex-col border-2 border-black px-2 rounded-md"
+          className="flex justify-center items-center gap-5 w-[17rem]"
         >
-          <span className="font-semibold">{data.school}</span>
-          <span className="italic text-sm">{data.year}</span>
+          <img src={data.logo} className="w-[3rem]" alt={data.school} />
+          <section className="flex flex-col">
+            <span className="italic text-sm">{data.year}</span>
+            <span className="font-semibold text-sm lg:text-base">{data.school}</span>
+            <span className="text-sm">{data.major}</span>
+          </section>
         </div>
       ))}
     </div>
