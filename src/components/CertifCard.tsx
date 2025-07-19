@@ -1,9 +1,15 @@
-export default function CertifCard(props) {
+interface CertifCardProps {
+  image: string;
+  title: string;
+  description: string;
+}
+
+export default function CertifCard(props: CertifCardProps) {
     const {image, title, description} = props;
     return(
         <div
         data-aos="fade-up"
-        className="group max-w-[24rem] h-fit p-5 border-2 border-black"
+        className="group max-w-[24rem] h-fit p-2 border-2 border-black"
       >
         <img
           src={image}

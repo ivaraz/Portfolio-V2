@@ -47,6 +47,14 @@ const dataProject = [
     link: "https://ivaraz.github.io/guess-the-number-2",
     animate: "fade-left",
   },
+  {
+    photo: "../assets/photos/cp7.png",
+    title: "RuntuyanApp",
+    description: "Make your productivity better",
+    tech: ["HTML","CSS", "JavaScript"],
+    link: "https://runtuyan-app.vercel.app/",
+    animate: "fade-right",
+  },
 ];
 
 export default dataProject;

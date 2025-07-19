@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import Rifa from "/assets/photos/rifaghibli.png";
+import Rifa from "/assets/photos/rifa_aslab.jpeg";
 import Lanyard from "../components/Lanyard/Lanyard";
 import TitledCard from "../components/TitledCard";
 import AOS from "aos";
