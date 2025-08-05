@@ -1,11 +1,12 @@
 import { RouteObject } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import AboutPage from "../pages/AboutPage";
-import CertificatePage from "../pages/CertificatePage";
-import ContactPage from "../pages/ContactPage";
-import SkillsPage from "../pages/SkillsPage";
+
 import MainLayout from "../Layout/MainLayout";
-import ProjectPage from '../pages/ProjectPage'
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Certificate from "../pages/Certificate";
+import Contact from "../pages/Contact";
+import Project from "../pages/Project";
+import Skills from "../pages/Skills";
 
 export interface AppRoute extends RouteObject {
   name?: string;
@@ -17,12 +18,13 @@ const routes: AppRoute[] = [
     path: "/",
     element: <MainLayout />,
     children: [
-      { path: "/", element: <HomePage />, name: "Home" },
-      { path: "/about", element: <AboutPage />, name: "About" },
-      { path: "/certificate", element: <CertificatePage />, name: "Certificate" },
-      { path: "/contact", element: <ContactPage />, name: "Contact" },
-      { path: "/project", element: <ProjectPage />, name: "Project" },
-      { path: "/skills", element: <SkillsPage />, name: "Skills" },
+      { index: true, element: <Home />, name: "Home" },
+      
+      { path: "about", element: <About />, name: "About" },
+      { path: "certificate", element: <Certificate />, name: "Certificate" },
+      { path: "contact", element: <Contact />, name: "Contact" },
+      { path: "project", element: <Project />, name: "Project" },
+      { path: "skills", element: <Skills />, name: "Skills" },
     ],
   },
 ];
