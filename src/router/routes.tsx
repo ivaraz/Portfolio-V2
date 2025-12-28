@@ -8,10 +8,10 @@ import Contact from "../pages/Contact";
 import Project from "../pages/Project";
 import Skills from "../pages/Skills";
 
-export interface AppRoute extends RouteObject {
+export type AppRoute = RouteObject & {
   name?: string;
   children?: AppRoute[];
-}
+};
 
 const routes: AppRoute[] = [
   {
@@ -19,7 +19,6 @@ const routes: AppRoute[] = [
     element: <MainLayout />,
     children: [
       { index: true, element: <Home />, name: "Home" },
-      
       { path: "about", element: <About />, name: "About" },
       { path: "certificate", element: <Certificate />, name: "Certificate" },
       { path: "contact", element: <Contact />, name: "Contact" },
