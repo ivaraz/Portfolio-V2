@@ -6,7 +6,7 @@ type dataSkills = {
   duration: number;
 };
 
-const DataSkills: dataSkills[] = [
+const FrontEnd: dataSkills[] = [
   {
     id: 1,
     logos: "https://img.icons8.com/?size=100&id=20909&format=png&color=000000",
@@ -45,30 +45,7 @@ const DataSkills: dataSkills[] = [
     animate: "zoom-in",
     duration: 2000,
   },
-  {
-    id: 6,
-    logos:
-      "https://img.icons8.com/?size=100&id=fAMVO_fuoOuC&format=png&color=000000",
-    title: "PHP",
-    animate: "zoom-in",
-    duration: 2000,
-  },
-  {
-    id: 7,
-    logos:
-      "https://img.icons8.com/?size=100&id=9nLaR5KFGjN0&format=png&color=000000",
-    title: "MySQL",
-    animate: "zoom-in",
-    duration: 2000,
-  },
-  {
-    id: 8,
-    logos:
-      "https://img.icons8.com/?size=100&id=hUvxmdu7Rloj&format=png&color=000000",
-    title: "Laravel",
-    animate: "zoom-in",
-    duration: 2000,
-  },
+
   {
     id: 9,
     logos: "https://img.icons8.com/?size=100&id=123603&format=png&color=000000",
@@ -76,22 +53,58 @@ const DataSkills: dataSkills[] = [
     animate: "zoom-in",
     duration: 2000,
   },
+];
+
+const BackEnd: dataSkills[] = [
   {
-    id: 10,
+    id: 1,
+    logos: "https://www.php.net//images/logos/new-php-logo.svg",
+    title: "PHP",
+    animate: "zoom-in",
+    duration: 2000,
+  },
+  {
+    id: 2,
+    logos:
+      "https://img.icons8.com/?size=100&id=9nLaR5KFGjN0&format=png&color=000000",
+    title: "MySQL",
+    animate: "zoom-in",
+    duration: 2000,
+  },
+  {
+    id: 3,
+    logos:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/120px-Laravel.svg.png?20190820171151",
+    title: "Laravel",
+    animate: "zoom-in",
+    duration: 2000,
+  },
+  {
+    id: 4,
+    logos: "https://www.postgresql.org/media/img/about/press/elephant.png",
+    title: "PostgreSQL",
+    animate: "zoom-in",
+    duration: 2000,
+  },
+];
+
+const OtherLanguages: dataSkills[] = [
+  {
+    id: 1,
     logos: "https://img.icons8.com/?size=100&id=40669&format=png&color=000000",
     title: "C++",
     animate: "zoom-in",
     duration: 2000,
   },
   {
-    id: 11,
+    id: 2,
     logos: "https://img.icons8.com/?size=100&id=13441&format=png&color=000000",
     title: "Python",
     animate: "zoom-in",
     duration: 2000,
   },
   {
-    id: 12,
+    id: 3,
     logos: "https://img.icons8.com/?size=100&id=13679&format=png&color=000000",
     title: "Java",
     animate: "zoom-in",
@@ -99,4 +112,45 @@ const DataSkills: dataSkills[] = [
   },
 ];
 
-export default DataSkills;
+const Tools: dataSkills[] = [
+  {
+    id: 1,
+    logos: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+    title: "Git",
+    animate: "zoom-in",
+    duration: 2000,
+  },
+  {
+    id: 2,
+    logos:
+      "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+    title: "GitHub",
+    animate: "zoom-in",
+    duration: 2000,
+  },
+  {
+    id: 3,
+    logos: "https://code.visualstudio.com/assets/branding/code-stable.png",
+    title: "VS Code",
+    animate: "zoom-in",
+    duration: 2000,
+  },
+  {
+    id: 4,
+    logos:
+      "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png",
+    title: "Postman",
+    animate: "zoom-in",
+    duration: 2000,
+  },
+  {
+    id: 5,
+    logos:
+      "https://www.navicat.com/images/02.Product_00_AllProducts_Premium16.svg",
+    title: "Navicat",
+    animate: "zoom-in",
+    duration: 2000,
+  },
+];
+
+export { FrontEnd, BackEnd, OtherLanguages, Tools };

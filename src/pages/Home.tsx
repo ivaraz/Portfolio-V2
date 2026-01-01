@@ -1,8 +1,9 @@
-import Rifa from "/assets/photos/Rifa.jpg";
-import TitledCard from "../components/TitledCard";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+
+import Rifa from "/assets/photos/Rifa.jpg";
+import TitledCard from "../components/TitledCard";
 
 export default function Home() {
   useEffect(() => {
@@ -10,11 +11,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div
+    <section
       id="home"
-      className="lg:flex lg:flex-row-reverse lg:justify-around flex flex-col justify-center items-center max-w-full min-h-screen bg-white"
+      className="
+        min-h-screen w-full bg-white
+        flex flex-col items-center justify-center
+        lg:flex-row-reverse lg:justify-around
+      "
     >
-      <div className="w-full max-w-screen-sm rounded-sm bg-cover mb-5 lg:mb-0">
+      {/* Photo Section */}
+      <div className="w-full max-w-sm mb-6 lg:mb-0">
         <TitledCard
           imageSrc={Rifa}
           altText="Muhammad Rifa"
@@ -25,27 +31,34 @@ export default function Home() {
           rotateAmplitude={12}
           scaleOnHover={1}
           showMobileWarning={false}
-          showTooltip={true}
-          displayOverlayContent={true}
+          showTooltip
+          displayOverlayContent
         />
       </div>
-      <div data-aos="fade-left" className="flex flex-col lg:gap-5 gap-3">
-        <h1 className="lg:text-5xl text-4xl font-semibold flex flex-col">
-          <span className="lg:text-4xl text-3xl font-semibold">
-            Hello, I am
-          </span>
-          <span>
+
+      {/* Text Section */}
+      <div
+        data-aos="fade-left"
+        className="flex flex-col gap-3 lg:gap-5 text-center lg:text-left"
+      >
+        <h1 className="text-4xl lg:text-5xl font-semibold leading-tight">
+          <span className="block text-3xl lg:text-4xl">Hello, I am</span>
+          <span className="block">
             Muhammad <span className="text-red-600">Rifa</span>
           </span>
-          <span>
+          <span className="block">
             Maulana <span className="text-red-600">Aziz</span>
           </span>
         </h1>
-        <p className="lg:text-xl font-semibold">
+
+        <p className="text-lg lg:text-xl font-semibold">
           IT Enthusiast | Informatics Student
         </p>
-        <i className="text-gray-500">"a lazy programmer who loves tech."</i>
+
+        <i className="text-gray-500">
+          &quot;a lazy programmer who loves tech.&quot;
+        </i>
       </div>
-    </div>
+    </section>
   );
 }

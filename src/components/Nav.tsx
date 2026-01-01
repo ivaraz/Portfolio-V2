@@ -1,50 +1,58 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import routes, { AppRoute } from "../router/routes";
-import { NavLink } from 'react-router-dom'
 
-const Nav: React.FC = () => {
+export default function Nav() {
   const navLinks = (routes[0]?.children ?? []) as AppRoute[];
   const [hasShadow, setHasShadow] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setHasShadow(true);
-      } else {
-        setHasShadow(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const onScroll = () => setHasShadow(window.scrollY > 0);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const navClass = ({ isActive }: { isActive: boolean }) =>
+    `
+  relative inline-block font-semibold
+  transition-colors duration-300
+  ${isActive ? "text-black" : "text-gray-500"}
+
+  after:content-['']
+  after:absolute
+  after:left-0
+  after:h-[2px]
+  after:w-full
+  after:bg-black
+  after:rounded-full
+  after:origin-left
+  after:transition-transform
+  after:duration-300
+  after:scale-x-0
+
+  after:bottom-1
+  lg:after:-bottom-1
+
+  hover:after:scale-x-100
+  ${isActive ? "after:scale-x-100" : ""}
+  `;
 
   return (
     <nav
-      className={`min-w-full bg-white fixed top-0 z-50 transition-shadow duration-300 ${
+      className={`fixed top-0 z-50 w-full bg-white transition-shadow duration-300 ${
         hasShadow ? "shadow-md" : ""
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center py-4">
-        {/* Logo */}
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <span className="font-semibold text-lg lg:text-xl">RIFA AZIZ</span>
 
-        {/* Hamburger Button */}
+        {/* Hamburger */}
         <button
-          className="lg:hidden text-gray-700 focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="lg:hidden"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
         >
-          <svg
-            className="w-6 h-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor">
             {isMenuOpen ? (
               <path
                 strokeLinecap="round"
@@ -63,45 +71,31 @@ const Nav: React.FC = () => {
           </svg>
         </button>
 
-        {/* PC Navbar */}
-        <div
-          className={`lg:flex hidden md:hidden items-center gap-8 font-semibold text-gray-700 ${
-            isMenuOpen ? "block" : "hidden"
-          }`}
+        {/* ONE MENU (Desktop + Mobile) */}
+        <ul
+          onClick={() => setIsMenuOpen(false)}
+          className={`
+            absolute top-full left-0 w-full bg-white shadow-md
+            flex flex-col items-center
+            transition-all duration-300
+            ${isMenuOpen ? "block" : "hidden"}
+            pb-4
+            lg:static lg:flex lg:flex-row lg:w-auto lg:shadow-none lg:gap-8
+          `}
         >
-          {navLinks.map((route, item) => (
-            <li key={item} className="list-none">
-            <NavLink className={"relative group"}
-              to={route.path ?? "/"}
-              style={({ isActive }) => ({
-                color: isActive ? "black" : "gray",
-                fontWeight: isActive ? "bold" : "semibold",
-              })}
-            >
-              {route.name}
-            <span className="absolute bottom-[-5px] left-0 w-0 h-[2.5px] bg-black transition-all duration-300 group-hover:w-full rounded-md"></span>
-            </NavLink>
-          </li>
+          {navLinks.map((route) => (
+            <li key={route.path} className="w-full lg:w-auto text-center">
+              <NavLink
+                to={route.path ?? "/"}
+                onClick={() => setIsMenuOpen(false)}
+                className={navClass}
+              >
+                <span className="block py-2 lg:py-0">{route.name}</span>
+              </NavLink>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-
-      {/* Mobile Navbar */}
-      {isMenuOpen && (
-        <div className="lg:hidden md:hidden bg-white shadow-md px-4 pb-4">
-          {navLinks.map((route,item) => (
-            <NavLink to={route.path}
-              key={item}
-              onClick={() => setIsMenuOpen(false)}
-              className="block w-full text-center font-semibold px-4 py-2 text-black hover:bg-gray-100 hover:font-bold"
-            >
-              {route.name}
-            </NavLink>
-          ))}
-        </div>
-      )}
     </nav>
   );
 }
-
-export default Nav;
