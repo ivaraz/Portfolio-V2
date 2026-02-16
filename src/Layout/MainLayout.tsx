@@ -1,14 +1,14 @@
-import React from "react";
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
 import AOS from "aos";
-import { useEffect } from "react";
 import Footer from "../components/Footer";
 
-const MainLayout: React.FC = () => {
+export default function MainLayout() {
   useEffect(() => {
     AOS.init({ once: true });
   }, []);
+
   return (
     <>
       <Nav />
@@ -18,6 +18,4 @@ const MainLayout: React.FC = () => {
       </main>
     </>
   );
-};
-
-export default MainLayout;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "./Button";
 
 interface FormData {
@@ -7,7 +7,7 @@ interface FormData {
   message: string;
 }
 
-const ContactForm: React.FC = () => {
+const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",

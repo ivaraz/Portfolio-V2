@@ -1,7 +1,7 @@
 interface CertifCardProps {
   image: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }
 
 export default function CertifCard({

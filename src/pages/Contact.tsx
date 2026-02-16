@@ -4,7 +4,7 @@ import ContactInfo from "../components/ContactInfo";
 const Contact: React.FC = () => (
   <section
     id="contact"
-    className="py-20 bg-white transition-colors duration-300 relative overflow-hidden"
+    className="py-20 bg-white min-h-screen transition-colors duration-300 relative overflow-hidden"
   >
     <div className="container mx-auto px-6 relative z-10">
       <div className="text-center mb-12" data-aos="fade-up">

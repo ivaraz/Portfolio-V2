@@ -1,20 +1,12 @@
-import React from "react";
-
 interface ButtonProps {
-  name?: string;
   children?: React.ReactNode;
   type?: "button" | "submit" | "reset";
   link?: string;
-  text?: string;
-  bg?: string;
   download?: boolean;
-  bgHover?: string;
-  textHover?: string;
   onClick?: () => void;
 }
 
 export default function Button({
-  name,
   children,
   type,
   link = "#",
@@ -29,7 +21,6 @@ export default function Button({
         download={download}
       >
         {children}
-        {name}
       </a>
     </button>
   );
