@@ -39,7 +39,7 @@ export default function Education() {
                     <h3 className="text-base sm:text-lg font-semibold text-white">
                       {data.school}
                     </h3>
-                    <p className="text-sm text-slate-300 mt-1">{data.major}</p>
+                    <p className="text-sm text-slate-500 mt-1">{data.major}</p>
                     <p className="text-xs sm:text-sm text-slate-400 mt-1">
                       {data.year}
                     </p>

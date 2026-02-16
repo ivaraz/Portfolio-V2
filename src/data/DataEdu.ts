@@ -3,8 +3,8 @@ import type { EducationItem } from "../types";
 const edu: EducationItem[] = [
   {
     logo: "/assets/photos/unsur.png",
-    school: "Suryakancana University",
-    major: "Bachelor of Informatics Engineering",
+    school: "Universitas Suryakancana",
+    major: "Undergraduate of Informatics Engineering",
     year: "2024 – Present",
     status: "current",
     description:

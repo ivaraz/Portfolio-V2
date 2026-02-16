@@ -3,7 +3,7 @@ import type { CertificateItem } from "../types";
 const DataCertificates: CertificateItem[] = [
   {
     image: "/assets/certificate/sertif.jpg",
-    title: "Lomba Mikrotik",
+    title: "October Digital Creativity 2023",
     description:
       "Lomba ini diselenggarakan pada bulan Agustus - September 2023 secara online, dan babak Final yang bertempat di SMK Mitra Industri MM2100 Bekasi mendapat posisi ke-13 dari 26 tim",
   },
