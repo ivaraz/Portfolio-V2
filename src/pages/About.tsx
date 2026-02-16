@@ -1,30 +1,9 @@
-import { useState, useEffect } from "react";
 import DataSos from "../data/DataSos";
 import Details from "../components/Details";
 import Education from "../components/Education";
 import Card from "../components/Card";
 
 export default function About() {
-  const [age, setAge] = useState(19);
-
-  useEffect(() => {
-    const today = new Date();
-    const birthDate = new Date("2005-04-23");
-
-    let age = today.getFullYear() - birthDate.getFullYear();
-
-    const isBeforeBirthday =
-      today.getMonth() < birthDate.getMonth() ||
-      (today.getMonth() === birthDate.getMonth() &&
-        today.getDate() < birthDate.getDate());
-
-    if (isBeforeBirthday) {
-      age -= 1;
-    }
-
-    setAge(age);
-  }, []);
-
   return (
     <div
       id="about"

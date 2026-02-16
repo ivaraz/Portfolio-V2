@@ -14,7 +14,7 @@ const Contact: React.FC = () => (
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-8">
-        <div className="hidden md:block space-y-4" data-aos="fade-right">
+        <div className="block space-y-4" data-aos="fade-right">
           <ContactInfo
             icon={
               <path
