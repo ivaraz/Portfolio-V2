@@ -1,21 +1,15 @@
 import ContactForm from "../components/ContactForm";
 import ContactInfo from "../components/ContactInfo";
 
-const Contact = () => (
+const Contact: React.FC = () => (
   <section
     id="contact"
-    className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden"
+    className="py-20 bg-white transition-colors duration-300 relative overflow-hidden"
   >
-    <div
-      id="contact-stars"
-      className="absolute inset-0 hidden dark:block"
-    ></div>
     <div className="container mx-auto px-6 relative z-10">
       <div className="text-center mb-12" data-aos="fade-up">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
-          Get In Touch
-        </h2>
-        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
           Feel free to reach out for collaborations or just a friendly hello
         </p>
       </div>
@@ -32,8 +26,8 @@ const Contact = () => (
             }
             title="Email"
             description="rifamaulana243@gmail.com"
-            bgColor="bg-blue-100 dark:bg-blue-900"
-            iconColor="text-blue-600 dark:text-blue-400"
+            bgColor="bg-blue-100"
+            iconColor="text-blue-600"
           />
           <ContactInfo
             icon={
@@ -46,8 +40,8 @@ const Contact = () => (
             }
             title="Phone"
             description="+62 895-3261-43968"
-            bgColor="bg-green-100 dark:bg-green-900"
-            iconColor="text-green-600 dark:text-green-400"
+            bgColor="bg-green-100"
+            iconColor="text-green-600"
           />
           <ContactInfo
             icon={
@@ -60,8 +54,8 @@ const Contact = () => (
             }
             title="Location"
             description="Cianjur, Indonesia"
-            bgColor="bg-purple-100 dark:bg-purple-900"
-            iconColor="text-purple-600 dark:text-purple-400"
+            bgColor="bg-purple-100"
+            iconColor="text-purple-600"
           />
         </div>
         <ContactForm />
@@ -69,4 +63,5 @@ const Contact = () => (
     </div>
   </section>
 );
+
 export default Contact;

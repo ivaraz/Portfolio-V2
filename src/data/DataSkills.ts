@@ -1,12 +1,6 @@
-type dataSkills = {
-  id: number;
-  logos: string;
-  title: string;
-  animate: string;
-  duration: number;
-};
+import type { SkillItem } from "../types";
 
-const FrontEnd: dataSkills[] = [
+const FrontEnd: SkillItem[] = [
   {
     id: 1,
     logos: "https://img.icons8.com/?size=100&id=20909&format=png&color=000000",
@@ -45,7 +39,6 @@ const FrontEnd: dataSkills[] = [
     animate: "zoom-in",
     duration: 2000,
   },
-
   {
     id: 9,
     logos: "https://img.icons8.com/?size=100&id=123603&format=png&color=000000",
@@ -55,7 +48,7 @@ const FrontEnd: dataSkills[] = [
   },
 ];
 
-const BackEnd: dataSkills[] = [
+const BackEnd: SkillItem[] = [
   {
     id: 1,
     logos: "https://www.php.net//images/logos/new-php-logo.svg",
@@ -88,7 +81,7 @@ const BackEnd: dataSkills[] = [
   },
 ];
 
-const OtherLanguages: dataSkills[] = [
+const OtherLanguages: SkillItem[] = [
   {
     id: 1,
     logos: "https://img.icons8.com/?size=100&id=40669&format=png&color=000000",
@@ -112,7 +105,7 @@ const OtherLanguages: dataSkills[] = [
   },
 ];
 
-const Tools: dataSkills[] = [
+const Tools: SkillItem[] = [
   {
     id: 1,
     logos: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",

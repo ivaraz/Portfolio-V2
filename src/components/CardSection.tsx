@@ -1,19 +1,15 @@
+import type { SkillItem } from "../types";
 import CardWeb from "./CardWeb";
 
-type SkillItem = {
-  id: number;
-  logos: string;
-  title: string;
-  animate: string;
-  duration: number;
-};
-
-type Props = {
+interface CardSectionProps {
   titleSection: string;
   skills: SkillItem[];
-};
+}
 
-export default function CardSection({ titleSection, skills }: Props) {
+export default function CardSection({
+  titleSection,
+  skills,
+}: CardSectionProps) {
   return (
     <div className="w-full max-w-full items-center gap-4 bg-white p-4 rounded-lg shadow-lg flex flex-col border-2 border-black">
       <h1 className="text-3xl text-center mb-2 font-semibold">

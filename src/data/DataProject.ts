@@ -1,4 +1,6 @@
-const dataProject = [
+import type { ProjectItem } from "../types";
+
+const dataProject: ProjectItem[] = [
   {
     photo: "../assets/photos/cp.png",
     title: "Web Kelas",
@@ -38,6 +40,14 @@ const dataProject = [
     tech: ["HTML", "CSS", "JavaScript"],
     link: "https://ivaraz.github.io/guess-the-number-2",
     animate: "fade-left",
+  },
+  {
+    photo: "../assets/photos/cp13.png",
+    title: "Website LPM Desa",
+    description: "Pengelolaan Website Desa",
+    tech: ["HTML", "CSS", "JavaScript", "PHP"],
+    link: "https://ivaraz.gt.tc/",
+    animate: "fade-right",
   },
   {
     photo: "../assets/photos/cp7.png",

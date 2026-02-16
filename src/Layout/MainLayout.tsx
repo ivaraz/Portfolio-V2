@@ -7,15 +7,15 @@ import Footer from "../components/Footer";
 
 const MainLayout: React.FC = () => {
   useEffect(() => {
-      AOS.init({ once: true });
-    }, []);
+    AOS.init({ once: true });
+  }, []);
   return (
     <>
       <Nav />
       <main>
         <Outlet />
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import SkillsButton from "../components/SkillsButton";
-import SkillsWeb from "../Layout/SkillsWeb";
+import SkillsWeb from "../components/SkillsWeb";
 
 export type TabItem = {
   id: number;
@@ -30,7 +30,7 @@ export default function Skills() {
 
   const activeContent = useMemo(
     () => tabItems.find((tab) => tab.id === activeTab)?.content,
-    [activeTab]
+    [activeTab],
   );
 
   return (

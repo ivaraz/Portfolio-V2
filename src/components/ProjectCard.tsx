@@ -1,13 +1,4 @@
-import { Link } from "react-router-dom";
-
-type ProjectCardProps = {
-  photo: string;
-  title: string;
-  description: string;
-  tech: string[];
-  link: string;
-  animate?: string;
-};
+import type { ProjectItem } from "../types";
 
 export default function ProjectCard({
   photo,
@@ -16,7 +7,7 @@ export default function ProjectCard({
   tech,
   link,
   animate = "fade-up",
-}: ProjectCardProps) {
+}: ProjectItem) {
   return (
     <article
       data-aos={animate}
@@ -28,8 +19,8 @@ export default function ProjectCard({
         hover:shadow-lg hover:shadow-gray-400
       "
     >
-      <Link
-        to={link}
+      <a
+        href={link}
         target="_blank"
         rel="noopener noreferrer"
         className="block"
@@ -70,7 +61,7 @@ export default function ProjectCard({
             ))}
           </div>
         </div>
-      </Link>
+      </a>
     </article>
   );
 }

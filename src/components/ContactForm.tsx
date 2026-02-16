@@ -1,9 +1,14 @@
-import { useState } from "react";
-
+import React, { useState } from "react";
 import Button from "./Button";
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
@@ -11,14 +16,15 @@ const ContactForm = () => {
 
   const [status, setStatus] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbyBxlPje4c3ZQa66DHE9FHYjU-yqm_S86hNwRvIMxjfHyXORXl1F5DF5V3T1AtpJ0guNg/exec";
+    const scriptURL = import.meta.env.VITE_CONTACT_FORM_URL;
 
     try {
       await fetch(scriptURL, {
@@ -37,6 +43,7 @@ const ContactForm = () => {
       console.error("Error:", error);
     }
   };
+
   return (
     <form
       id="form-saran"
@@ -65,7 +72,7 @@ const ContactForm = () => {
           type="text"
           placeholder="Your Name"
           required
-          className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-300 hover:border-blue-400 dark:hover:border-blue-500"
+          className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-blue-400"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -91,7 +98,7 @@ const ContactForm = () => {
           type="email"
           placeholder="Your Email"
           required
-          className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-300 hover:border-blue-400 dark:hover:border-blue-500"
+          className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-blue-400"
           name="email"
           value={formData.email}
           onChange={handleChange}
@@ -115,18 +122,15 @@ const ContactForm = () => {
         </div>
         <textarea
           placeholder="Your Message"
-          rows="4"
+          rows={4}
           required
-          className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-300 hover:border-blue-400 dark:hover:border-blue-500 resize-none"
+          className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-blue-400 resize-none"
           name="message"
           value={formData.message}
           onChange={handleChange}
         />
       </div>
-      <Button
-        type={"submit"}
-        className="group w-full md:w-auto px-6 py-3 bg-black hover:text-black text-white rounded-lg hover:bg-white transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg flex items-center justify-center space-x-2"
-      >
+      <Button type="submit">
         <span>Send Message</span>
         <svg
           className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
@@ -162,4 +166,5 @@ const ContactForm = () => {
     </form>
   );
 };
+
 export default ContactForm;

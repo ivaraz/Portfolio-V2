@@ -1,5 +1,3 @@
-import "aos/dist/aos.css";
-
 type Props = {
   logos: string;
   title: string;

@@ -79,7 +79,7 @@ export default function Nav() {
             flex flex-col items-center
             transition-all duration-300
             ${isMenuOpen ? "block" : "hidden"}
-            pb-4
+            pb-0
             lg:static lg:flex lg:flex-row lg:w-auto lg:shadow-none lg:gap-8
           `}
         >

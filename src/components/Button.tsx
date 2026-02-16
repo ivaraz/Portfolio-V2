@@ -1,24 +1,35 @@
-export default function Button(props) {
-  const {
-    name,
-    children,
-    type,
-    link = "#",
-    text = "black",
-    bg = "transparent",
-    download = false,
-    bgHover = "black",
-    textHover = "white",
-    onClick,
-  } = props;
+import React from "react";
+
+interface ButtonProps {
+  name?: string;
+  children?: React.ReactNode;
+  type?: "button" | "submit" | "reset";
+  link?: string;
+  text?: string;
+  bg?: string;
+  download?: boolean;
+  bgHover?: string;
+  textHover?: string;
+  onClick?: () => void;
+}
+
+export default function Button({
+  name,
+  children,
+  type,
+  link = "#",
+  download = false,
+  onClick,
+}: ButtonProps) {
   return (
     <button type={type} onClick={onClick}>
       <a
         href={link}
-        className={`bg-${bg} text-${text} border-2 justify-center flex border-black font-semibold hover:bg-${bgHover} hover:text-${textHover} py-2 px-4 rounded transition-all duration-500 ease-in-out`}
+        className="bg-transparent text-black border-2 justify-center flex border-black font-semibold hover:bg-black hover:text-white py-2 px-4 rounded transition-all duration-500 ease-in-out"
         download={download}
       >
-        {[children, name]}
+        {children}
+        {name}
       </a>
     </button>
   );

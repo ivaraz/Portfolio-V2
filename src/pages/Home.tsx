@@ -1,15 +1,8 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-import Rifa from "/assets/photos/Rifa.jpg";
 import TitledCard from "../components/TitledCard";
 
-export default function Home() {
-  useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
+const Rifa = "/assets/photos/Rifa.jpg";
 
+export default function Home() {
   return (
     <section
       id="home"
@@ -51,12 +44,12 @@ export default function Home() {
           </span>
         </h1>
 
-        <p className="text-lg lg:text-xl font-semibold">
-          IT Enthusiast | Informatics Student
+        <p className="text-md lg:text-xl font-semibold">
+          Frontend Developer &amp; Informatics Student
         </p>
 
         <i className="text-gray-500">
-          &quot;a lazy programmer who loves tech.&quot;
+          &quot;Building clean, scalable, and user-focused web interfaces.&quot;
         </i>
       </div>
     </section>
