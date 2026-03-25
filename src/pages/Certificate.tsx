@@ -6,12 +6,12 @@ export default function Certificate() {
     <section
       id="certificate"
       className="
-        min-h-screen w-full bg-white
+        min-h-screen w-full transition-colors duration-300
         flex flex-col items-center justify-center
         gap-10 py-20
       "
     >
-      <h1 data-aos="fade-down" className="text-3xl lg:text-4xl font-semibold">
+      <h1 data-aos="fade-down" className="text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
         Certificate
       </h1>
 

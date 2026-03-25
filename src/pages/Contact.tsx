@@ -4,16 +4,16 @@ import ContactInfo from "../components/ContactInfo";
 const Contact: React.FC = () => (
   <section
     id="contact"
-    className="py-20 bg-white min-h-screen transition-colors duration-300 relative overflow-hidden"
+    className="py-20 min-h-screen transition-colors duration-300 relative overflow-hidden"
   >
     <div className="container mx-auto px-6 relative z-10">
       <div className="text-center mb-12" data-aos="fade-up">
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500 mb-4">Get In Touch</h2>
+        <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium">
           Feel free to reach out for collaborations or just a friendly hello
         </p>
       </div>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto">
         <div className="block space-y-4" data-aos="fade-right">
           <ContactInfo
             icon={
@@ -26,8 +26,6 @@ const Contact: React.FC = () => (
             }
             title="Email"
             description="rifamaulana243@gmail.com"
-            bgColor="bg-blue-100"
-            iconColor="text-blue-600"
           />
           <ContactInfo
             icon={
@@ -40,8 +38,6 @@ const Contact: React.FC = () => (
             }
             title="Phone"
             description="+62 895-3261-43968"
-            bgColor="bg-green-100"
-            iconColor="text-green-600"
           />
           <ContactInfo
             icon={
@@ -54,8 +50,6 @@ const Contact: React.FC = () => (
             }
             title="Location"
             description="Cianjur, Indonesia"
-            bgColor="bg-purple-100"
-            iconColor="text-purple-600"
           />
         </div>
         <ContactForm />

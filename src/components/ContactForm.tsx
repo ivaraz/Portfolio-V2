@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "./Button";
 
 interface FormData {
   name: string;
@@ -52,88 +51,46 @@ const ContactForm = () => {
       data-aos="fade-left"
       onSubmit={handleSubmit}
     >
-      <div className="relative">
-        <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none text-gray-400">
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-            />
-          </svg>
-        </div>
+      <div className="flex flex-col gap-2">
         <input
           type="text"
           placeholder="Your Name"
           required
-          className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-blue-400"
+          className="w-full px-5 py-4 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 text-slate-800 dark:text-white placeholder-slate-400 transition-all duration-300 shadow-sm hover:border-violet-300 dark:hover:border-violet-500/50"
           name="name"
           value={formData.name}
           onChange={handleChange}
         />
       </div>
-      <div className="relative">
-        <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none text-gray-400">
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            />
-          </svg>
-        </div>
+      <div className="flex flex-col gap-2">
         <input
           type="email"
           placeholder="Your Email"
           required
-          className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-blue-400"
+          className="w-full px-5 py-4 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 text-slate-800 dark:text-white placeholder-slate-400 transition-all duration-300 shadow-sm hover:border-violet-300 dark:hover:border-violet-500/50"
           name="email"
           value={formData.email}
           onChange={handleChange}
         />
       </div>
-      <div className="relative">
-        <div className="absolute top-3 left-3 flex items-start pointer-events-none text-gray-400">
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-            />
-          </svg>
-        </div>
+      <div className="flex flex-col gap-2">
         <textarea
           placeholder="Your Message"
-          rows={4}
+          rows={5}
           required
-          className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-gray-500 transition-all duration-300 hover:border-blue-400 resize-none"
+          className="w-full px-5 py-4 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 text-slate-800 dark:text-white placeholder-slate-400 transition-all duration-300 shadow-sm hover:border-violet-300 dark:hover:border-violet-500/50 resize-none"
           name="message"
           value={formData.message}
           onChange={handleChange}
         />
       </div>
-      <Button type="submit">
+      <button 
+        type="submit" 
+        className="group w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-violet-500/30 transition-all duration-300 hover:-translate-y-1 active:scale-95"
+      >
         <span>Send Message</span>
         <svg
-          className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+          className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -142,10 +99,10 @@ const ContactForm = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
+            d="M5 12h14M12 5l7 7-7 7"
           />
         </svg>
-      </Button>
+      </button>
       {status && (
         <div
           className={`mt-4 p-3 rounded-lg flex items-center justify-between ${

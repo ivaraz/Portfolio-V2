@@ -1,58 +1,116 @@
 import DataSos from "../data/DataSos";
-import Details from "../components/Details";
 import Education from "../components/Education";
-import Card from "../components/Card";
+
+const stats = [
+  { value: "∞", label: "Learning & Improvements" },
+  { value: "6+", label: "Dynamic Web Projects" },
+  { value: "8+", label: "Certificates Earned" },
+];
 
 export default function About() {
   return (
-    <div
+    <section
       id="about"
-      className="flex flex-col lg:flex-row lg:justify-around lg:justify-center items-center min-h-screen bg-white pt-20 lg:pt-0"
+      className="relative min-h-screen transition-colors duration-300"
     >
-      <div className="lg:flex lg:flex-row flex flex-col items-center ">
-        <div
-          data-aos="fade-left"
-          className="lg:w-[50rem] min-w-fit max-w-screen-sm"
-        >
-          <div className="flex lg:justify-start">
-            <h1 className="lg:text-4xl mx-5 lg:mx-0 font-bai font-semibold mb-3 text-start">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16 pt-28 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        {/* ── Left column ── */}
+        <div data-aos="fade-right" className="flex flex-col gap-8">
+          {/* Section tag */}
+          <div className="flex items-center gap-3">
+            <span className="h-px w-8 bg-violet-500" />
+            <span className="text-md tracking-[0.1em] uppercase text-violet-600 font-medium">
               About Me
-            </h1>
-            <span className="w-[15%] self-center ml-3 rounded-lg h-[0.2rem] bg-black"></span>
+            </span>
           </div>
-          <div className="gap-5 grid lg:text-lg lg:mx-0 w-full text-sm lg:w-[45rem]">
-            <p className="text-justify mx-5 lg:mx-0">
-              I am a Frontend Developer and Informatics student at Suryakancana
-              University with a strong passion for building modern and
-              user-centered web applications. I enjoy transforming complex ideas
-              into clean, intuitive, and efficient digital experiences.
+
+          <h1 className="text-4xl lg:text-5xl font-bai font-bold leading-tight">
+            Crafting{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
+              Digital
+            </span>{" "}
+            Experiences
+          </h1>
+
+          <div className="flex flex-col gap-4 text-[0.95rem] text-slate-600 dark:text-slate-400 leading-relaxed transition-colors duration-300">
+            <p>
+              I am a{" "}
+              <span className="text-slate-900 dark:text-white font-semibold dark:font-medium">
+                Frontend Developer
+              </span>{" "}
+              and Informatics student at Suryakancana University with a strong
+              passion for building modern and user-centered web applications. I
+              enjoy transforming complex ideas into clean, intuitive, and
+              efficient digital experiences.
             </p>
-            <p className="text-justify mx-5 lg:mx-0">
-              With a background in Computer and Network Engineering, I developed
-              strong technical fundamentals that help me understand both system
-              structure and frontend architecture. Today, I focus on building
-              responsive, scalable, and maintainable web interfaces using modern
-              technologies.
+            <p>
+              With a background in{" "}
+              <span className="text-slate-900 dark:text-white font-semibold dark:font-medium">
+                Computer &amp; Network Engineering
+              </span>
+              , I developed strong technical fundamentals that help me
+              understand both system structure and frontend architecture. Today,
+              I focus on building responsive, scalable, and maintainable web
+              interfaces using modern technologies.
             </p>
-            <div className="flex gap-2 flex-col lg:flex-row justify-center items-center">
-              <Card total="Continues" title="Learning & Improvements" />
-              <Card total="6+ Project" title="Website Dynamic" />
-              <Card total="8+" title="Certificate Earned" />
-            </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 mx-10 lg:gap-5 gap-3 justify-center items-center">
-              {DataSos.map((item, index) => (
-                <Details key={index} {...item} />
-              ))}
-            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-3">
+            {stats.map((s) => (
+              <div
+                key={s.label}
+                className="flex flex-col items-center text-center gap-1 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 dark:backdrop-blur-md px-3 py-5 shadow-sm hover:border-violet-300 dark:hover:border-violet-500/40 hover:shadow-md transition-all duration-300"
+              >
+                <span className="text-2xl lg:text-3xl font-bold text-violet-600">
+                  {s.value}
+                </span>
+                <span className="text-[0.7rem] text-slate-500 dark:text-slate-400 leading-tight">
+                  {s.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Social / Links */}
+          <div className="grid grid-cols-2 gap-3">
+            {DataSos.map((item, i) => (
+              <a
+                key={i}
+                href={item.link}
+                download={item.isDownload || undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-4 py-3 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 dark:backdrop-blur-md text-sm text-slate-700 dark:text-slate-300 shadow-sm hover:border-violet-400 dark:hover:border-violet-500/50 hover:text-violet-700 dark:hover:text-violet-300 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-all duration-300 group"
+              >
+                <span className="text-base text-violet-600 group-hover:scale-110 transition-transform duration-200">
+                  {item.logo}
+                </span>
+                <span className="font-medium">{item.sosmed}</span>
+              </a>
+            ))}
           </div>
         </div>
+
+        {/* ── Right column — Education ── */}
+        <div data-aos="fade-left" className="flex flex-col gap-8">
+          <div className="flex items-center gap-3">
+            <span className="h-px w-8 bg-violet-500" />
+            <span className="text-md tracking-[0.1em] uppercase text-violet-600 font-medium">
+              Education
+            </span>
+          </div>
+
+          <h2 className="text-3xl lg:text-4xl font-bai font-bold leading-tight">
+            Academic{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
+              Background
+            </span>
+          </h2>
+
+          <Education />
+        </div>
       </div>
-      <div className="w-fit p-4 rounded-md mt-10 lg:mt-0">
-        <h1 className="lg:text-3xl text-2xl mx-5 lg:mx-0 font-bai font-semibold mb-3 text-start">
-          Education
-        </h1>
-        <Education />
-      </div>
-    </div>
+    </section>
   );
 }

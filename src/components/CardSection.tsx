@@ -11,8 +11,8 @@ export default function CardSection({
   skills,
 }: CardSectionProps) {
   return (
-    <div className="w-full max-w-full items-center gap-4 bg-white p-4 rounded-lg shadow-lg flex flex-col border-2 border-black">
-      <h1 className="text-3xl text-center mb-2 font-semibold">
+    <div className="w-full max-w-full items-center gap-6 bg-white dark:bg-white/5 dark:backdrop-blur-md p-6 rounded-2xl shadow-sm hover:shadow-md dark:shadow-none flex flex-col border border-slate-200 dark:border-white/10 transition-all duration-300">
+      <h1 className="text-sm tracking-[0.2em] uppercase text-center font-semibold text-slate-800 dark:text-slate-200">
         {titleSection}
       </h1>
 

@@ -5,9 +5,8 @@ const Rifa = "/assets/photos/Rifa.jpg";
 export default function Home() {
   return (
     <section
-      id="home"
       className="
-        min-h-screen w-full bg-white
+        min-h-screen w-full transition-colors duration-300
         flex flex-col items-center justify-center
         lg:flex-row-reverse lg:justify-around
       "
@@ -35,20 +34,28 @@ export default function Home() {
         className="flex flex-col gap-3 lg:gap-5 text-center lg:text-left"
       >
         <h1 className="text-4xl lg:text-5xl font-semibold leading-tight">
-          <span className="block text-3xl lg:text-4xl">Hello, I am</span>
-          <span className="block">
-            Muhammad <span className="text-red-600">Rifa</span>
+          <span className="block text-3xl lg:text-4xl text-slate-800 dark:text-white">
+            Hello, I am
           </span>
-          <span className="block">
-            Maulana <span className="text-red-600">Aziz</span>
+          <span className="block text-slate-800 dark:text-white">
+            Muhammad{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
+              Rifa
+            </span>
+          </span>
+          <span className="block text-slate-800 dark:text-white">
+            Maulana{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
+              Aziz
+            </span>
           </span>
         </h1>
 
         <p className="text-md lg:text-xl font-semibold">
-          Frontend Developer &amp; Informatics Student
+          Frontend Developer | Informatics Student
         </p>
 
-        <i className="text-gray-500">
+        <i className="text-gray-500 dark:text-gray-400">
           &quot;Building clean, scalable, and user-focused web interfaces.&quot;
         </i>
       </div>

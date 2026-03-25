@@ -36,24 +36,24 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="flex flex-col gap-10 items-center mt-20 min-h-screen bg-white"
+      className="flex flex-col gap-10 items-center mt-10 pt-20 pb-10 min-h-screen transition-colors duration-300"
     >
       <div className="text-center flex flex-col gap-3">
         <h1
           data-aos="fade-down"
           data-aos-duration="2000"
-          className="font-semibold text-4xl lg:text-5xl"
+          className="font-semibold text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500"
         >
           What I Do
         </h1>
 
-        <p className="text-center mx-10 font-semibold text-gray-600">
+        <p className="text-center max-w-2xl mx-auto px-4 font-medium text-slate-500 dark:text-slate-400 leading-relaxed">
           {tabItems.find((tab) => tab.id === activeTab)?.desc}
         </p>
       </div>
 
       {/* Buttons */}
-      <div className="flex gap-2">
+      <div className="flex bg-slate-100 dark:bg-white/5 dark:backdrop-blur-md p-1 rounded-full shadow-inner border border-slate-200 dark:border-white/10">
         {tabItems.map((tab) => (
           <SkillsButton
             key={tab.id}
@@ -64,7 +64,7 @@ export default function Skills() {
         ))}
       </div>
 
-      <div className="w-full max-w-5xl flex justify-center min-h-[400px]">
+      <div className="w-full max-w-7xl px-4 lg:px-8 flex justify-center min-h-[400px]">
         {activeContent ?? <h1>Konten tidak tersedia</h1>}
       </div>
     </div>
