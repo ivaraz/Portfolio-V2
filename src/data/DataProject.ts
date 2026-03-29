@@ -13,9 +13,17 @@ const dataProject: ProjectItem[] = [
     photo: "../assets/photos/cp2.png",
     title: "Invitation Card",
     description: "custom project",
-    tech: ["Bootstrap", "JavaScript"],
+    tech: ["React", "TailwindCSS", "Framer Motion"],
     link: "https://ivaraz.github.io/undangan/",
     animate: "fade-left",
+  },
+  {
+    photo: "../assets/photos/cp12.png",
+    title: "Invitation Card V2",
+    description: "custom project",
+    tech: ["React", "TailwindCSS", "Framer Motion"],
+    link: "https://ivaraz.github.io/undangan-v2",
+    animate: "fade-right",
   },
   {
     photo: "../assets/photos/cp4.png",
@@ -44,7 +52,7 @@ const dataProject: ProjectItem[] = [
   {
     photo: "../assets/photos/cp13.png",
     title: "Website LPM Desa",
-    description: "Pengelolaan Website Desa",
+    description: "Website Pengelolaan Desa",
     tech: ["HTML", "CSS", "JavaScript", "PHP"],
     link: "https://ivaraz.gt.tc/",
     animate: "fade-right",
@@ -87,14 +95,6 @@ const dataProject: ProjectItem[] = [
     description: "Send Package Website Clone",
     tech: ["HTML", "CSS", "JavaScript", "PHP"],
     link: "https://alvingustiara.xo.je/",
-    animate: "fade-right",
-  },
-  {
-    photo: "../assets/photos/cp12.png",
-    title: "NotesApp",
-    description: "Classic Notes Application",
-    tech: ["HTML", "CSS", "JavaScript", "PHP"],
-    link: "https://miralsetiawan.gt.tc/",
     animate: "fade-right",
   },
 ];

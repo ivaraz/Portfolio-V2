@@ -7,6 +7,8 @@ import {
   SiHtml5,
   SiCss3,
   SiPhp,
+  SiReact,
+  SiFramer,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
@@ -19,6 +21,8 @@ const TechIconMap: Record<string, IconType> = {
   HTML: SiHtml5,
   CSS: SiCss3,
   PHP: SiPhp,
+  React: SiReact,
+  "Framer Motion": SiFramer,
 };
 
 export default function ProjectCard({
