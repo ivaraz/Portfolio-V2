@@ -5,7 +5,7 @@ import {
   SiAlpinedotjs,
   SiBootstrap,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiPhp,
   SiReact,
   SiFramer,
@@ -19,7 +19,7 @@ const TechIconMap: Record<string, IconType> = {
   AlpineJS: SiAlpinedotjs,
   Bootstrap: SiBootstrap,
   HTML: SiHtml5,
-  CSS: SiCss3,
+  CSS: SiCss,
   PHP: SiPhp,
   React: SiReact,
   "Framer Motion": SiFramer,
@@ -95,7 +95,11 @@ export default function ProjectCard({
                     transition-colors duration-300
                   "
                 >
-                  {Icon ? <Icon className="text-lg" /> : <span className="text-xs px-2">{item}</span>}
+                  {Icon ? (
+                    <Icon className="text-lg" />
+                  ) : (
+                    <span className="text-xs px-2">{item}</span>
+                  )}
                 </div>
               );
             })}
