@@ -52,7 +52,7 @@ export default function Home() {
         </h1>
 
         <p className="text-md lg:text-xl font-semibold">
-          Frontend Developer | Informatics Student
+          Web Developer | Informatics Student
         </p>
 
         <i className="text-gray-500 dark:text-gray-400">
