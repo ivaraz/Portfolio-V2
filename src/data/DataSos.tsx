@@ -10,7 +10,7 @@ const DataSos: SocialItem[] = [
   {
     logo: <FaDownload />,
     sosmed: "Resume",
-    link: "/assets/cv/latest-cv.pdf",
+    link: "/assets/cv/CV_Muhammad_Rifa_2026.pdf",
     isDownload: true,
   },
   {

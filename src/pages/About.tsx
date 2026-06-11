@@ -3,7 +3,7 @@ import Education from "../components/Education";
 
 const stats = [
   { value: "∞", label: "Learning & Improvements" },
-  { value: "6+", label: "Dynamic Web Projects" },
+  { value: "10+", label: "Web Projects" },
   { value: "8+", label: "Certificates Earned" },
 ];
 
