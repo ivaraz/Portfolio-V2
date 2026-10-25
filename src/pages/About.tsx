@@ -36,12 +36,13 @@ export default function About() {
             <p>
               I am a{" "}
               <span className="text-slate-900 dark:text-white font-semibold dark:font-medium">
-                Frontend Developer
+                Web Developer
               </span>{" "}
-              and Informatics student at Suryakancana University with a strong
-              passion for building modern and user-centered web applications. I
-              enjoy transforming complex ideas into clean, intuitive, and
-              efficient digital experiences.
+              and 5th Semester Informatics Engineering Student & Laboratory
+              Assistant at Suryakancana University with a strong passion for
+              building modern and user-centered web applications. I enjoy
+              transforming complex ideas into clean, intuitive, and efficient
+              digital experiences.
             </p>
             <p>
               With a background in{" "}
