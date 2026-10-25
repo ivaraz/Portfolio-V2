@@ -15,7 +15,7 @@ export default function Project() {
         <h1
           data-aos="fade-down"
           data-aos-duration="1000"
-          className="text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500"
+          className="text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-pink-400 dark:to-pink-600"
         >
           Project
         </h1>

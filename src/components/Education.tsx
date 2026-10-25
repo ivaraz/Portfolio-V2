@@ -4,7 +4,7 @@ export default function Education() {
   return (
     <div className="relative flex flex-col gap-0 pl-5">
       {/* Vertical timeline rail */}
-      <div className="absolute left-0 top-2 bottom-2 w-px bg-gradient-to-b from-violet-500 via-violet-500/30 to-transparent" />
+      <div className="absolute left-0 top-2 bottom-2 w-px bg-gradient-to-b from-slate-400 via-slate-300/30 to-transparent dark:from-pink-500 dark:via-pink-500/30" />
 
       {edu.map((data, index) => (
         <div
@@ -12,9 +12,9 @@ export default function Education() {
           className="relative flex flex-col gap-0 pb-10 last:pb-0"
         >
           {/* Timeline dot */}
-          <div className="absolute -left-5 top-5 w-2.5 h-2.5 rounded-full bg-violet-500 ring-4 ring-violet-500/20 translate-x-[0.5px]" />
+          <div className="absolute -left-5 top-5 w-2.5 h-2.5 rounded-full bg-slate-400 ring-4 ring-slate-400/20 dark:bg-pink-500 dark:ring-pink-500/20 translate-x-[0.5px]" />
 
-          <div className="ml-4 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 dark:backdrop-blur-md p-5 shadow-sm hover:border-violet-300 dark:hover:border-violet-500/40 hover:shadow-md transition-all duration-300">
+          <div className="ml-4 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 dark:backdrop-blur-md p-5 shadow-sm hover:border-slate-300 dark:hover:border-pink-500/40 hover:shadow-md transition-all duration-300">
             <div className="flex items-start gap-4">
               {/* Logo */}
               <div className="shrink-0 w-12 h-12 rounded-xl bg-slate-100 dark:bg-white/10 flex items-center justify-center overflow-hidden">
@@ -42,8 +42,8 @@ export default function Education() {
                   <span
                     className={`text-[0.7rem] px-2.5 py-1 rounded-full font-medium shrink-0 ${
                       data.status === "current"
-                        ? "bg-violet-500/15 text-violet-300 border border-violet-500/25"
-                        : "bg-emerald-500/15 text-emerald-400 border border-emerald-500/25"
+                        ? "bg-slate-100 text-slate-600 border border-slate-300 dark:bg-pink-500/15 dark:text-pink-300 dark:border-pink-500/25"
+                        : "bg-emerald-100 text-emerald-700 border border-emerald-300 dark:bg-emerald-500/15 dark:text-emerald-400 dark:border-emerald-500/25"
                     }`}
                   >
                     {data.status === "current" ? "Studying" : "Graduated"}

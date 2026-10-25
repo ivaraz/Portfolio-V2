@@ -42,7 +42,7 @@ export default function Skills() {
         <h1
           data-aos="fade-down"
           data-aos-duration="2000"
-          className="font-semibold text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500"
+          className="font-semibold text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-pink-400 dark:to-pink-600"
         >
           What I Do
         </h1>
@@ -53,7 +53,7 @@ export default function Skills() {
       </div>
 
       {/* Buttons */}
-      <div className="flex bg-slate-100 dark:bg-white/5 dark:backdrop-blur-md p-1 rounded-full shadow-inner border border-slate-200 dark:border-white/10">
+      <div className="flex flex-wrap justify-center bg-slate-100 dark:bg-white/5 dark:backdrop-blur-md p-1 rounded-full shadow-inner border border-slate-200 dark:border-white/10">
         {tabItems.map((tab) => (
           <SkillsButton
             key={tab.id}

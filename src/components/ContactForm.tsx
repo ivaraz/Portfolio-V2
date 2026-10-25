@@ -56,7 +56,7 @@ const ContactForm = () => {
           type="text"
           placeholder="Your Name"
           required
-          className="w-full px-5 py-4 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 text-slate-800 dark:text-white placeholder-slate-400 transition-all duration-300 shadow-sm hover:border-violet-300 dark:hover:border-violet-500/50"
+          className="w-full px-5 py-4 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-slate-400/50 focus:border-slate-400 dark:focus:ring-pink-500/50 dark:focus:border-pink-500 text-slate-800 dark:text-white placeholder-slate-400 transition-all duration-300 shadow-sm hover:border-slate-400 dark:hover:border-pink-500/50"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -67,7 +67,7 @@ const ContactForm = () => {
           type="email"
           placeholder="Your Email"
           required
-          className="w-full px-5 py-4 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 text-slate-800 dark:text-white placeholder-slate-400 transition-all duration-300 shadow-sm hover:border-violet-300 dark:hover:border-violet-500/50"
+          className="w-full px-5 py-4 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-slate-400/50 focus:border-slate-400 dark:focus:ring-pink-500/50 dark:focus:border-pink-500 text-slate-800 dark:text-white placeholder-slate-400 transition-all duration-300 shadow-sm hover:border-slate-400 dark:hover:border-pink-500/50"
           name="email"
           value={formData.email}
           onChange={handleChange}
@@ -78,7 +78,7 @@ const ContactForm = () => {
           placeholder="Your Message"
           rows={5}
           required
-          className="w-full px-5 py-4 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 text-slate-800 dark:text-white placeholder-slate-400 transition-all duration-300 shadow-sm hover:border-violet-300 dark:hover:border-violet-500/50 resize-none"
+          className="w-full px-5 py-4 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-slate-400/50 focus:border-slate-400 dark:focus:ring-pink-500/50 dark:focus:border-pink-500 text-slate-800 dark:text-white placeholder-slate-400 transition-all duration-300 shadow-sm hover:border-slate-400 dark:hover:border-pink-500/50 resize-none"
           name="message"
           value={formData.message}
           onChange={handleChange}
@@ -86,7 +86,7 @@ const ContactForm = () => {
       </div>
       <button 
         type="submit" 
-        className="group w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-violet-600 to-indigo-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-violet-500/30 transition-all duration-300 hover:-translate-y-1 active:scale-95"
+        className="group w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-slate-800 to-slate-500 dark:from-pink-500 dark:to-pink-400 text-white font-semibold rounded-2xl shadow-lg hover:shadow-slate-500/30 dark:hover:shadow-pink-500/30 transition-all duration-300 hover:-translate-y-1 active:scale-95"
       >
         <span>Send Message</span>
         <svg
@@ -107,8 +107,8 @@ const ContactForm = () => {
         <div
           className={`mt-4 p-3 rounded-lg flex items-center justify-between ${
             status.includes("Sukses")
-              ? "bg-green-100 text-green-800 border border-green-400"
-              : "bg-red-100 text-red-800 border border-red-400"
+              ? "bg-green-100 text-green-800 border border-green-400 dark:bg-green-500/15 dark:text-green-400 dark:border-green-500/25"
+              : "bg-red-100 text-red-800 border border-red-400 dark:bg-red-500/15 dark:text-red-400 dark:border-red-500/25"
           }`}
         >
           <span>{status}</span>

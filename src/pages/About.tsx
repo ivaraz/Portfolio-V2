@@ -18,15 +18,15 @@ export default function About() {
         <div data-aos="fade-right" className="flex flex-col gap-8">
           {/* Section tag */}
           <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-violet-500" />
-            <span className="text-md tracking-[0.1em] uppercase text-violet-600 font-medium">
+            <span className="h-px w-8 bg-slate-500 dark:bg-pink-500" />
+            <span className="text-md tracking-[0.1em] uppercase text-slate-600 dark:text-pink-400 font-medium">
               About Me
             </span>
           </div>
 
           <h1 className="text-4xl lg:text-5xl font-bai font-bold leading-tight">
             Crafting{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-pink-400 dark:to-pink-600">
               Digital
             </span>{" "}
             Experiences
@@ -61,9 +61,9 @@ export default function About() {
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="flex flex-col items-center text-center gap-1 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 dark:backdrop-blur-md px-3 py-5 shadow-sm hover:border-violet-300 dark:hover:border-violet-500/40 hover:shadow-md transition-all duration-300"
+                className="flex flex-col items-center text-center gap-1 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 dark:backdrop-blur-md px-3 py-5 shadow-sm hover:border-slate-300 dark:hover:border-pink-500/40 hover:shadow-md transition-all duration-300"
               >
-                <span className="text-2xl lg:text-3xl font-bold text-violet-600">
+                <span className="text-2xl lg:text-3xl font-bold text-slate-800 dark:text-pink-400">
                   {s.value}
                 </span>
                 <span className="text-[0.7rem] text-slate-500 dark:text-slate-400 leading-tight">
@@ -82,9 +82,9 @@ export default function About() {
                 download={item.isDownload || undefined}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-4 py-3 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 dark:backdrop-blur-md text-sm text-slate-700 dark:text-slate-300 shadow-sm hover:border-violet-400 dark:hover:border-violet-500/50 hover:text-violet-700 dark:hover:text-violet-300 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-all duration-300 group"
+                className="flex items-center gap-3 px-4 py-3 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 dark:backdrop-blur-md text-sm text-slate-700 dark:text-slate-300 shadow-sm hover:border-slate-400 dark:hover:border-pink-500/50 hover:text-slate-900 dark:hover:text-pink-300 hover:bg-slate-100 dark:hover:bg-pink-500/10 transition-all duration-300 group"
               >
-                <span className="text-base text-violet-600 group-hover:scale-110 transition-transform duration-200">
+                <span className="text-base text-slate-700 dark:text-pink-400 group-hover:scale-110 transition-transform duration-200">
                   {item.logo}
                 </span>
                 <span className="font-medium">{item.sosmed}</span>
@@ -96,15 +96,15 @@ export default function About() {
         {/* ── Right column — Education ── */}
         <div data-aos="fade-left" className="flex flex-col gap-8">
           <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-violet-500" />
-            <span className="text-md tracking-[0.1em] uppercase text-violet-600 font-medium">
+            <span className="h-px w-8 bg-slate-500 dark:bg-pink-500" />
+            <span className="text-md tracking-[0.1em] uppercase text-slate-600 dark:text-pink-400 font-medium">
               Education
             </span>
           </div>
 
           <h2 className="text-3xl lg:text-4xl font-bai font-bold leading-tight">
             Academic{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-pink-400 dark:to-pink-600">
               Background
             </span>
           </h2>

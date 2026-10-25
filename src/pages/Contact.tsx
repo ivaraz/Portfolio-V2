@@ -8,7 +8,7 @@ const Contact: React.FC = () => (
   >
     <div className="container mx-auto px-6 relative z-10">
       <div className="text-center mb-12" data-aos="fade-up">
-        <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500 mb-4">Get In Touch</h2>
+        <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-pink-400 dark:to-pink-600 mb-4">Get In Touch</h2>
         <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium">
           Feel free to reach out for collaborations or just a friendly hello
         </p>

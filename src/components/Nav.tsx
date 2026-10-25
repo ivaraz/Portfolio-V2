@@ -17,14 +17,14 @@ export default function Nav() {
     `
   relative inline-block font-semibold
   transition-colors duration-300
-  ${isActive ? "text-black dark:text-white" : "text-slate-800 dark:text-gray-300 hover:text-black dark:hover:text-white"}
+  ${isActive ? "text-black dark:text-pink-400" : "text-slate-700 dark:text-gray-300 hover:text-black dark:hover:text-pink-300"}
 
   after:content-['']
   after:absolute
   after:left-0
   after:h-[2px]
   after:w-full
-  after:bg-black dark:after:bg-white
+  after:bg-black dark:after:bg-pink-400
   after:rounded-full
   after:origin-left
   after:transition-transform
@@ -40,14 +40,10 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300 lg:bg-transparent lg:backdrop-blur-sm ${
-        hasShadow
-          ? "bg-white/70 dark:bg-violet-950/50 backdrop-blur-md shadow-md dark:shadow-gray-800/50"
-          : "bg-transparent backdrop-blur-sm"
-      }`}
+      className={`fixed top-0 z-50 w-full transition-all duration-300 lg:bg-transparent `}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <span className="font-semibold text-lg lg:text-xl dark:text-white">
+        <span className="font-semibold text-base sm:text-lg lg:text-xl dark:text-white">
           RIFA AZIZ
         </span>
 
@@ -79,7 +75,7 @@ export default function Nav() {
         <ul
           onClick={() => setIsMenuOpen(false)}
           className={`
-            absolute top-full left-0 w-full bg-white/80 dark:bg-violet-900/90 backdrop-blur-md shadow-md dark:shadow-violet-900/20
+            absolute top-full left-0 w-full bg-white/90 dark:bg-[#0f0f14]/95 backdrop-blur-md shadow-md dark:shadow-pink-900/20
             flex flex-col items-center
             transition-all duration-300
             ${isMenuOpen ? "block" : "hidden"}

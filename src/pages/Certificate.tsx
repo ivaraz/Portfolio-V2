@@ -11,7 +11,7 @@ export default function Certificate() {
         gap-10 py-20
       "
     >
-      <h1 data-aos="fade-down" className="text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
+      <h1 data-aos="fade-down" className="text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-pink-400 dark:to-pink-600">
         Certificate
       </h1>
 

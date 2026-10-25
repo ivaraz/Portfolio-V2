@@ -10,8 +10,8 @@ export default function ThemeToggle() {
       aria-label="Toggle dark mode"
       title={isDark ? "Switch to light mode" : "Switch to dark mode"}
       className="
-        fixed bottom-6 right-6 z-50
-        w-12 h-12 rounded-full
+        fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50
+        w-11 h-11 sm:w-12 sm:h-12 rounded-full
         flex items-center justify-center
         shadow-lg
         bg-white border border-slate-200
@@ -21,9 +21,9 @@ export default function ThemeToggle() {
       "
     >
       {isDark ? (
-        <MdLightMode className="text-yellow-400 text-2xl" />
+        <MdLightMode className="text-pink-400 text-2xl" />
       ) : (
-        <MdDarkMode className="text-violet-600 text-2xl" />
+        <MdDarkMode className="text-slate-700 text-2xl" />
       )}
     </button>
   );

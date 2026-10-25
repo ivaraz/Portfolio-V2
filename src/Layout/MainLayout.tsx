@@ -11,10 +11,10 @@ export default function MainLayout() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 dark:bg-[#0f0f14] dark:text-gray-100 transition-colors duration-300 relative">
+    <div className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-800 dark:bg-[#0f0f14] dark:text-gray-100 transition-colors duration-300 relative">
       {/* Fixed Background blobs globally */}
-      <div className="pointer-events-none fixed -top-40 -left-40 w-[32rem] h-[32rem] rounded-full bg-violet-300/30 dark:bg-violet-600/10 blur-3xl transition-colors duration-300 z-0" />
-      <div className="pointer-events-none fixed bottom-0 right-0 w-[26rem] h-[26rem] rounded-full bg-indigo-300/25 dark:bg-indigo-500/10 blur-3xl transition-colors duration-300 z-0" />
+      <div className="pointer-events-none fixed -top-40 -left-40 w-[32rem] h-[32rem] rounded-full bg-slate-300/30 dark:bg-pink-600/10 blur-3xl transition-colors duration-300 z-0" />
+      <div className="pointer-events-none fixed bottom-0 right-0 w-[26rem] h-[26rem] rounded-full bg-slate-200/25 dark:bg-pink-500/10 blur-3xl transition-colors duration-300 z-0" />
       
       <div className="relative z-10 flex flex-col min-h-screen">
         <Nav />

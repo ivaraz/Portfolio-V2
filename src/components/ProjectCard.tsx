@@ -41,7 +41,7 @@ export default function ProjectCard({
         border border-slate-200 dark:border-white/10 rounded-2xl
         bg-white dark:bg-white/5 dark:backdrop-blur-md cursor-pointer
         transition-all duration-500 overflow-hidden
-        hover:shadow-xl hover:shadow-violet-900/10 dark:hover:shadow-violet-900/20 hover:-translate-y-2
+        hover:shadow-xl hover:shadow-slate-900/10 dark:hover:shadow-pink-900/20 hover:-translate-y-2
       "
     >
       <a
@@ -70,7 +70,7 @@ export default function ProjectCard({
         {/* Content */}
         <div className="p-6 flex flex-col flex-1 gap-4">
           <div className="flex-1">
-            <h2 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+            <h2 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-slate-900 dark:group-hover:text-pink-400 transition-colors">
               {title}
             </h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed">
@@ -90,8 +90,8 @@ export default function ProjectCard({
                     flex items-center justify-center p-2 rounded-lg
                     bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10
                     text-slate-500 dark:text-slate-400
-                    group-hover:border-violet-200 dark:group-hover:border-violet-500/30
-                    group-hover:text-violet-600 dark:group-hover:text-violet-400
+                    group-hover:border-slate-300 dark:group-hover:border-pink-500/30
+                    group-hover:text-slate-900 dark:group-hover:text-pink-400
                     transition-colors duration-300
                   "
                 >

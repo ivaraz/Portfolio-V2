@@ -15,7 +15,7 @@ export default function CertifCard({
       className="
         group
         max-w-sm
-        border-2 border-black dark:border-white/10
+        border-2 border-slate-300 dark:border-white/10
         dark:bg-white/5 dark:backdrop-blur-md
         p-3
         flex flex-col items-center gap-2

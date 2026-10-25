@@ -12,7 +12,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
   description,
 }) => (
   <div className="group flex items-center space-x-5 p-5 bg-white dark:bg-white/5 dark:backdrop-blur-md border border-slate-100 dark:border-white/10 rounded-2xl shadow-sm hover:shadow-md dark:shadow-none transition-all duration-300 hover:-translate-y-1">
-    <div className="p-4 bg-slate-50 dark:bg-white/5 rounded-full text-violet-600 dark:text-violet-400 group-hover:bg-violet-50 dark:group-hover:bg-violet-500/10 transition-colors">
+    <div className="p-4 bg-slate-50 dark:bg-white/5 rounded-full text-slate-700 dark:text-pink-400 group-hover:bg-slate-100 dark:group-hover:bg-pink-500/10 transition-colors">
       <svg
         className="w-6 h-6"
         fill="none"
@@ -23,7 +23,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
       </svg>
     </div>
     <div>
-      <h3 className="text-lg font-bold text-slate-800 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">{title}</h3>
+      <h3 className="text-lg font-bold text-slate-800 dark:text-white group-hover:text-slate-900 dark:group-hover:text-pink-400 transition-colors">{title}</h3>
       <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{description}</p>
     </div>
   </div>
